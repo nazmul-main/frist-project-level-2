@@ -1,5 +1,6 @@
 
-import { Schema, model } from 'mongoose';
+import { model, Schema, } from 'mongoose';
+import { Student } from './student/student.interface';
 /* ========= Mongoose Schemas ========= */
 
 // UserName Schema
@@ -55,11 +56,7 @@ const studentSchema = new Schema(
         localGardian: { type: localGardianSchema, required: true },
         profileImage: { type: String },
         isActive: ['active', 'blocked'],
-    },
-    {
-        timestamps: true,
-    }
-);
+    });
 
 /* ========= Mongoose Model ========= */
-export const StudentModel = model('Student', studentSchema);
+const Student = model<Student>('Student', studentSchema)
