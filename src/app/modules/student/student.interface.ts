@@ -1,4 +1,5 @@
 import { Schema, model, connect } from 'mongoose';
+/* ========= TypeScript Types ========= */
 export type Gardian = {
     fatherName: string;
     fatherOccupation: string;
@@ -6,25 +7,25 @@ export type Gardian = {
     motherName: string;
     motherOccupation: string;
     motherContactNo: string;
-}
+};
 
 export type UserName = {
     fristname: string;
     middleName: string;
     lastName: string;
-}
+};
 
-export type LocalGardian ={ 
+export type LocalGardian = {
     name: string;
     occupation: string;
     contact: string;
-    address: string
-}
+    address: string;
+};
 
 export type Student = {
     id: number;
     name: UserName;
-    gender: "male" | "female";
+    gender: 'male' | 'female';
     dateOfBrith: string;
     email: string;
     avatatar?: string;
@@ -35,6 +36,6 @@ export type Student = {
     permanentAdress: string;
     gardian: Gardian;
     localGardian: LocalGardian;
-    profileImage?: string
-    isActive: 'active' | 'inActive'
-}
+    profileImage?: string;
+    isActive: 'active' | 'blocked';
+};
