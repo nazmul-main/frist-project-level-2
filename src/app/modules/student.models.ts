@@ -61,4 +61,4 @@ const studentSchema = new Schema(
     });
 
 /* ========= Mongoose Model ========= */
-const Student = model<Student>('Student', studentSchema)
+export const StudentModel = model<Student>('Student', studentSchema)
