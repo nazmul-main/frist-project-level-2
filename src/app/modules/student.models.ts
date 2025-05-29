@@ -62,3 +62,7 @@ const studentSchema = new Schema(
 
 /* ========= Mongoose Model ========= */
 export const StudentModel = model<Student>('Student', studentSchema)
+
+
+
+
