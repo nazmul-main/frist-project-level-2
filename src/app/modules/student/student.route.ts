@@ -6,5 +6,6 @@ const router = express.Router()
 //will call controller function
 
 router.post('/create-student', studentControllers.createStudent)
+router.get('/', studentControllers.getAllStudents) 
 
 export const studentRoutes = router; //Route is a obj that's why not wrap this time in {}
